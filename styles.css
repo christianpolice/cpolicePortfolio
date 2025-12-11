@@ -1,0 +1,42 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa6b2;
+  --accent:#7dd3fc;
+  --accent-2:#60a5fa;
+  --max-width:1100px;
+  --radius:8px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
+  background:linear-gradient(180deg,var(--bg),#071023);
+  color:#e6eef6;line-height:1.5;-webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{margin:0;font-size:1.1rem}
+.nav a{color:var(--muted);text-decoration:none;margin-left:1rem}
+.hero{padding:4rem 0;text-align:left}
+.hero h2{font-size:2rem;margin:0 0 .5rem}
+.hero p{color:var(--muted);max-width:60ch}
+.btn{display:inline-block;background:var(--accent);color:#012;padding:.6rem 1rem;border-radius:6px;text-decoration:none;margin-top:1rem}
+.about{background:rgba(255,255,255,0.02);border-radius:var(--radius);padding:1.5rem;margin-top:1.5rem}
+.projects{margin-top:1.5rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1rem;border-radius:8px}
+.card h4{margin:0 0 .5rem}
+.contact{margin-top:1.5rem}
+.site-footer{padding:2rem 0;text-align:center;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .nav{margin-top:.6rem}
+  .grid{grid-template-columns:1fr}
+  .hero h2{font-size:1.6rem}
+}
